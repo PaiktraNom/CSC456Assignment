@@ -1,27 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Nom1
 {
-    class Class1
+    public class Class1
     {
-        public void Display()
+
+        static void Main(string [] args)
+        {
+            Shell s = new Shell();
+            s.Run();
+
+        }
+    }
+    public class Shell
+    {
+        private Dictionary<string, string> Aliases = new Dictionary<string, string>();
+        public void Run() 
         {
             string input = string.Empty;
             do
             {
                 Console.Write("Nom>");
                 input = Console.ReadLine();
+                Execute(input);
             } while (input != "exit");
         }
-
-        static void Main(string [] args)
+        public int Execute(string input)
         {
-            Class1 c = new Class1();
-            c.Display();
+            if (Aliases.Keys.Contains(input))
+            {
+                System.Diagnostics.Process process = new Process();
+                process.StartInfo = new ProcessStartInfo(Aliases[input])
+                {
+                    UseShellExecute = false
+                };
+
+                process.Start();
+                process.WaitForExit();
+
+                return 0;
+            }
+
+            Console.WriteLine($"{input} not found");
+            return 1;
         }
     }
 }
