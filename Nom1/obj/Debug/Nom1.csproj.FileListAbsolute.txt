@@ -1,0 +1,7 @@
+C:\Users\Bioni\OneDrive\Desktop\CSC 456\Nom1\Nom1\obj\Debug\Nom1.csprojAssemblyReference.cache
+C:\Users\Bioni\OneDrive\Desktop\CSC 456\Nom1\Nom1\obj\Debug\Nom1.csproj.CoreCompileInputs.cache
+C:\Users\Bioni\OneDrive\Desktop\CSC 456\Nom1\Nom1\bin\Debug\Nom1.exe.config
+C:\Users\Bioni\OneDrive\Desktop\CSC 456\Nom1\Nom1\bin\Debug\Nom1.exe
+C:\Users\Bioni\OneDrive\Desktop\CSC 456\Nom1\Nom1\bin\Debug\Nom1.pdb
+C:\Users\Bioni\OneDrive\Desktop\CSC 456\Nom1\Nom1\obj\Debug\Nom1.exe
+C:\Users\Bioni\OneDrive\Desktop\CSC 456\Nom1\Nom1\obj\Debug\Nom1.pdb
