@@ -67,7 +67,7 @@ namespace Nom2
             string input = string.Empty;
             do
             {
-                Console.Write("How many burgers do you want?");
+                Console.Write("How many burgers do you want? ");
                 input = Console.ReadLine();
                 return Int32.Parse(input);
             } while (Int32.Parse(input) >= 0);

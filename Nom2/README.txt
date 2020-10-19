@@ -33,5 +33,24 @@ RUNNING CODE
 1) Open Nom2.sln
 2) Press Start button
 
+***Due to the concurrent design of this program, the program may throw exceptions.***
+
 
 PROGRAM DESIGN
+The system has two array buffers, milk_buffer and cheese_buffer to represent resources milk and cheese being produced/consumed
+When accessing either buffers a mutex lock is given to the current thread to enfore mutual exclusion.
+
+Four semaphores are used, two for each buffer, to solve the producer/consumer problem.
+
+Both "Empty" semaphores are initialized to the max number of entries a buffer can handle to populate from producing threads.
+Each Empty.WaitOne() decreases the semaphore, representing the current space in a buffer.
+
+Both "Full" semaphores are initialized to 0, blocking until there are enough entries in the buffer to continue.
+
+The program will produce cheese by taking the top 3 entries (Ex. If there are six entries, then Cheese_Production will take entries {4, 5, 6},
+append them, and then append the thread ID {4, 5})
+
+The program will produce a burger by taking the top two entries (Ex. If there are 4 entries, then Cheese_Consumption will take entries {3, 4}
+and append the two entries together)
+
+The program will output Cheese values and Burger values when created.
